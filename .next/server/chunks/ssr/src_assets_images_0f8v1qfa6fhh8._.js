@@ -1,0 +1,3 @@
+module.exports=[45185,a=>{a.v("/_next/static/media/hero_businessman_1791355337739.23v8wmm-ia52u.jpg"+(globalThis.NEXT_CLIENT_ASSET_SUFFIX||""))},67757,a=>{a.v("/_next/static/media/talent_professional_1791355350707.1wpm8kzx2_isv.jpg"+(globalThis.NEXT_CLIENT_ASSET_SUFFIX||""))},57741,a=>{a.v("/_next/static/media/testimonial_avatar_1_1791355366224.1pq2xvomva14_.jpg"+(globalThis.NEXT_CLIENT_ASSET_SUFFIX||""))},69714,a=>{a.v("/_next/static/media/testimonial_avatar_2_1791355375978.29qd-ib6wpbk5.jpg"+(globalThis.NEXT_CLIENT_ASSET_SUFFIX||""))},48142,a=>{a.v("/_next/static/media/testimonial_avatar_3_1791355386156.36p6g6xhg9kqb.jpg"+(globalThis.NEXT_CLIENT_ASSET_SUFFIX||""))}];
+
+//# sourceMappingURL=src_assets_images_0f8v1qfa6fhh8._.js.map

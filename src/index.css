@@ -1,0 +1,181 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --color-navy-950: #080827;
+  --color-navy-900: #0a0a2f;
+  --color-navy-850: #0e0e38;
+  --color-navy-800: #141445;
+  --color-purple-brand: #6338F5;
+  --color-purple-accent: #7348FF;
+  --color-purple-light: #8B5CF6;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  background-color: #080827;
+  overflow-x: hidden;
+}
+
+/* Light theme is toggled from the navbar; these overrides adapt the existing dark utility surfaces. */
+html.light-theme body {
+  background-color: #f5f6fb;
+  color: #1e293b;
+}
+
+html.light-theme [class~="bg-[#080827]"],
+html.light-theme [class~="bg-[#0b0a27]"],
+html.light-theme [class~="bg-[#0d0d32]"],
+html.light-theme [class~="bg-[#0a0a30]"] {
+  background-color: #f5f6fb !important;
+}
+
+html.light-theme [class~="bg-[#0E0E38]"],
+html.light-theme [class~="bg-[#0e0e38]"],
+html.light-theme [class~="bg-[#121245]"],
+html.light-theme [class~="bg-[#161642]"],
+html.light-theme [class~="bg-[#16164A]"],
+html.light-theme [class~="bg-[#1B1B48]"],
+html.light-theme [class~="bg-[#12123D]"],
+html.light-theme [class~="bg-[#181845]"] {
+  background-color: #e9ebf3 !important;
+}
+
+html.light-theme [class~="bg-[#222236]"],
+html.light-theme [class~="bg-[#23233d]"],
+html.light-theme [class~="bg-[#292940]"] {
+  background-color: #ffffff !important;
+}
+
+html.light-theme .text-white {
+  color: #1e293b !important;
+}
+
+html.light-theme button.text-white,
+html.light-theme a.text-white[class*="bg-"],
+html.light-theme [class*="bg-gradient-to"] .text-white {
+  color: #ffffff !important;
+}
+
+html.light-theme .text-slate-200 {
+  color: #334155 !important;
+}
+
+html.light-theme .text-slate-300 {
+  color: #475569 !important;
+}
+
+html.light-theme .text-slate-400 {
+  color: #64748b !important;
+}
+
+html.light-theme [class~="hover:text-white"]:hover {
+  color: #1e293b !important;
+}
+
+html.light-theme a.light-theme-secondary {
+  color: #334155 !important;
+}
+
+html.light-theme [class~="text-[#e0dfeb]"],
+html.light-theme [class~="text-[#f0eff6]"] {
+  color: #334155 !important;
+}
+
+html.light-theme [class~="bg-white/10"] {
+  background-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+/* Subtle isometric / diagonal grid background */
+.hero-grid-bg {
+  background-image: 
+    radial-gradient(circle at 50% 30%, rgba(99, 56, 245, 0.22) 0%, transparent 60%),
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 48px 48px, 48px 48px;
+}
+
+/* Floating animation for brand icons */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.02);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes orbitRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-float-1 {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+.animate-float-2 {
+  animation: floatReverse 6s ease-in-out infinite 0.5s;
+}
+
+.animate-float-3 {
+  animation: floatSlow 7s ease-in-out infinite 1s;
+}
+
+.animate-orbit-slow {
+  animation: orbitRotate 45s linear infinite;
+}
+
+/* Purple ambient glow elements */
+.ambient-glow-left {
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  left: -200px;
+  top: 15%;
+  background: radial-gradient(circle, rgba(99, 56, 245, 0.28) 0%, rgba(99, 56, 245, 0.08) 45%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ambient-glow-right {
+  position: absolute;
+  width: 650px;
+  height: 650px;
+  right: -220px;
+  top: 5%;
+  background: radial-gradient(circle, rgba(112, 69, 255, 0.35) 0%, rgba(99, 56, 245, 0.12) 40%, transparent 70%);
+  filter: blur(70px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ambient-glow-center {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(99, 56, 245, 0.22) 0%, rgba(99, 56, 245, 0.06) 50%, transparent 75%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}

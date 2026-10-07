@@ -1,0 +1,6 @@
+{
+  "name": "JobBoard - Modern Job Marketplace",
+  "description": "Discover 208,000+ live jobs, connect with top tech companies, and find your dream career on JobBoard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
